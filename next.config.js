@@ -1,4 +1,7 @@
+const isProd = (process.env.NODE_ENV || 'production') === 'production'
+const path = '/poc-nextjs-gh-pages'
+
 module.exports = {
-  basePath: '/poc-nextjs-gh-pages',
-  assetPrefix: '/poc-nextjs-gh-pages/',
+  basePath: isProd ? path : '',
+  assetPrefix: isProd ? path : ''
 }
